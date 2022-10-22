@@ -1,12 +1,4 @@
----
-Title: Draw a Triangle
-Author: Kion
-Date: Sept. 24, 2017
-description: [View Source on Github](https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/02_Draw_a_Triangle)
----
-
 # Draw a Triangle
-
 
 
 <figure><img src="https://gtk.dashgl.com/img/bricks_002.png" alt=""><figcaption><p>First blue triangle with OpenGL</p></figcaption></figure>

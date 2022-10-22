@@ -1,5 +1,5 @@
 # Table of contents
 
-* [Brickout](brickout/00_abstract.md)
-* [Astroids](astroids/00_abstract.md)
-* [Invaders](invaders/00_abstract.md)
+* [Brickout](README.md)
+* [Astroids](astroids/00\_abstract.md)
+* [Invaders](invaders/00\_abstract.md)

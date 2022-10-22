@@ -1,7 +1,8 @@
 ---
-description: >-
-  View Source on Github:
-  https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/02_Draw_a_Triangle
+Title: Draw a Triangle
+Author: Kion
+Date: Sept. 24, 2017
+description: [View Source on Github](https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/02_Draw_a_Triangle)
 ---
 
 # Draw a Triangle
@@ -12,10 +13,9 @@ description: >-
 
 The next step is a little long. We will simply more in the next step, but first we write a triangle by defining and compiling shaders directly in the source code.
 
-```c
-#include <epoxy/gl.h>
-#include <epoxy/glx.h>
-#include <gtk/gtk.h>
+<pre data-file="main.c">#include &lt;epoxy/gl.h&gt;
+#include &lt;epoxy/glx.h&gt;
+#include &lt;gtk/gtk.h&gt;
 
 static void on_realize(GtkGLArea *area);
 static void on_render(GtkGLArea *area, GdkGLContext *context);
@@ -27,9 +27,9 @@ GLint attribute_coord2d;
 int main(int argc, char *argv[]) {
 
 	GtkWidget *window;
-	GtkWidget *glArea;
+	<span>GtkWidget *glArea;</span>
 
-	gtk_init(&argc, &argv);
+	gtk_init(&amp;argc, &amp;argv);
 
 	// Initialize Window
 
@@ -42,12 +42,12 @@ int main(int argc, char *argv[]) {
 
 	// Initialize GTK GL Area
 
-	glArea = gtk_gl_area_new();
+	<span>glArea = gtk_gl_area_new();
 	gtk_widget_set_vexpand(glArea, TRUE);
 	gtk_widget_set_hexpand(glArea, TRUE);
 	g_signal_connect(glArea, "realize", G_CALLBACK(on_realize), NULL);
 	g_signal_connect(glArea, "render", G_CALLBACK(on_render), NULL);
-	gtk_container_add(GTK_CONTAINER(window), glArea);
+	gtk_container_add(GTK_CONTAINER(window), glArea);</span>
 
 	// Show widgets
 
@@ -58,7 +58,7 @@ int main(int argc, char *argv[]) {
 
 }
 
-static void on_realize(GtkGLArea *area) {
+<span>static void on_realize(GtkGLArea *area) {
 
 	// Debug Message
 
@@ -78,7 +78,7 @@ static void on_realize(GtkGLArea *area) {
 
 	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 
-	glGenVertexArrays(1, &vao);
+	glGenVertexArrays(1, &amp;vao);
 	glBindVertexArray(vao);
 
 	GLfloat triangle_vertices[] = {
@@ -87,7 +87,7 @@ static void on_realize(GtkGLArea *area) {
 		 0.8, -0.8
 	};
 	
-	glGenBuffers(1, &vbo_triangle);
+	glGenBuffers(1, &amp;vbo_triangle);
 	glBindBuffer(GL_ARRAY_BUFFER, vbo_triangle);
 	glBufferData(
 		GL_ARRAY_BUFFER,
@@ -119,18 +119,18 @@ static void on_realize(GtkGLArea *area) {
 	"}";
 
 	GLuint fs = glCreateShader(GL_FRAGMENT_SHADER);
-	glShaderSource(fs, 1, &fs_source, NULL);
+	glShaderSource(fs, 1, &amp;fs_source, NULL);
 	glCompileShader(fs);
-	glGetShaderiv(fs, GL_COMPILE_STATUS, &compile_ok);
+	glGetShaderiv(fs, GL_COMPILE_STATUS, &amp;compile_ok);
 	if(!compile_ok) {
 		fprintf(stderr, "Error in fragment shader\n");
 		return;
 	}
 
 	GLuint vs = glCreateShader(GL_VERTEX_SHADER);
-	glShaderSource(vs, 1, &vs_source, NULL);
+	glShaderSource(vs, 1, &amp;vs_source, NULL);
 	glCompileShader(vs);
-	glGetShaderiv(vs, GL_COMPILE_STATUS, &compile_ok);
+	glGetShaderiv(vs, GL_COMPILE_STATUS, &amp;compile_ok);
 	if(!compile_ok) {
 		fprintf(stderr, "Error in vertex shader\n");
 		return;
@@ -140,7 +140,7 @@ static void on_realize(GtkGLArea *area) {
 	glAttachShader(program, vs);
 	glAttachShader(program, fs);
 	glLinkProgram(program);
-	glGetProgramiv(program, GL_LINK_STATUS, &link_ok);
+	glGetProgramiv(program, GL_LINK_STATUS, &amp;link_ok);
 	if(!link_ok) {
 		fprintf(stderr, "Error when linking program\n");
 		return;
@@ -178,8 +178,8 @@ static void on_render(GtkGLArea *area, GdkGLContext *context) {
 	glDrawArrays(GL_TRIANGLES, 0, 3);
 	glDisableVertexAttribArray(attribute_coord2d);
 
-}
-```
+}</span>
+</pre>
 
 Compile with:
 

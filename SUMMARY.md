@@ -1,8 +1,12 @@
 # Table of contents
 
-* [Brickout](README.md)
-  * [Open a Window](00\_abstract/open-a-window.md)
-  * [Draw a Triangle](00\_abstract/draw-a-triangle.md)
-  * [Separate Shaders](00\_abstract/separate-shaders.md)
-* [Astroids](astroids/00\_abstract.md)
-* [Invaders](invaders/00\_abstract.md)
+* [Introduction](README.md)
+
+## GTK
+
+* [Brickout](gtk/00\_abstract/README.md)
+  * [Open a Window](gtk/00\_abstract/open-a-window.md)
+  * [Draw a Triangle](gtk/00\_abstract/draw-a-triangle.md)
+  * [Separate Shaders](gtk/00\_abstract/separate-shaders.md)
+* [Invaders](gtk/00\_abstract-1.md)
+* [Astroids](gtk/00\_abstract-2.md)

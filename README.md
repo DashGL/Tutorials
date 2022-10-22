@@ -1,28 +1,27 @@
----
-description: >-
-  View Source on Github:
-  https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial
----
+# Introduction
 
-# Brickout
+## Libraries
 
-This tutorial covers how to make a Brickout Clone using the GTK+ library for a window context. OpenGL for rendering, and DashGL to manage matrix manipulation. We'll start off with something very simple, a very primitive clone of Brickout that doesn't use any sprites. We'll learn how to declare vertices and uniforms to draw basic objects on the screen and declare keydown callbacks to move entities on the screen
+### Freeglut
 
-<figure><img src=".gitbook/assets/bricks_017.png" alt=""><figcaption><p>Preview of completed tutorial with GTK, C and OpenGL</p></figcaption></figure>
+Freeglut is quick and effective. It's a very small window library that provided a few very basic functionality for giving you a window and getting into an OpenGL context. If you are on the Raspberry Pi, or just want somewhere to get started with OpenGL then this is a good library to go with.
 
-This tutorial was adapted from [Bill Mill's Canvas Tutorial](https://billmill.org/static/canvastutorial/), where he uses a basic Brickout clone to demonstrate the capabilities of the HTML5 canvas element. One of the first tutorials I was able to get working when starting off as a coder. The same concepts and style has been translated into OpenGL with GTK.
+### glfw
 
-### Install Dependencies
+Glfw is the window library currently used in the OpenGL red book. It's a simple library, similar to Freeglut with a few more controls on window hints. There are a lot of resources to work with between their site and RedBook examples on OpenGL. While the library is written in C a lot of the examples are written in C++ and use GLM. One note is that depending on your environment, this is not the easiest library to compile and run.
 
-Run the following command to get the dependencies for this tutorial, which can be used for Raspberry Pi on Ubuntu and Debian.
+### SDL
 
-```
-$ sudo apt-get install libgtk-3-dev libegl1-mesa-dev libepoxy-dev libpng-dev
-```
+SDL is definitely one of the most seductive and compelling libraries out there. It's a full fledged library which includes api's for audio, video, controls and the library is supported to cross compile to a lot of different platforms. It's also easy to install the tools required to compile and run programs in it. The downside is that for the wide adoption of emulators and games that use SDL, I can't for the life of me find any resources in C or Linux to figure out how to get a handle on this library.
 
-### # Approach
+### GTK
 
-We will implement our project one step at a time. All of the source code will be displayed for the `main.c` file each step. Other files will only be displayed when they are created or changed. If you need to check for what the project folder looks like at any given step, you can follow the Github links on each page to view the file layout.
+GTK is the standard this site uses. The most difficult part is figuring out the syntax for creating and looping a `GTKGLArea`, but once you get the basics down, it's a pretty versatile toolkit to work with with a lot of options for expansion. The XML and approach for layouts is kind of confusing if you want to branch out, but in terms of creating applications in C, on Linux, you'd be hard pressed to find better tools than this.
 
-If you have a specific coding style approach then feel free to use that. If you are new to programming, then this guide recomends separating each step into it's own folder, copying the previous folder each time. That will allow you to go back and double-check a working version in case something breaks.
+### EGL
 
+"Embedded Graphics Library"
+
+### Raylib
+
+I haven't used it directly

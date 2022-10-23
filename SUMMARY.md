@@ -12,5 +12,8 @@
   * [Orthagonal Coordinates](gtk/brickout/orthagonal-coordinates.md)
   * [Draw a Ball](gtk/brickout/draw-a-ball.md)
   * [Set Ball Position](gtk/brickout/set-ball-position.md)
+  * [Move a Ball](gtk/brickout/move-a-ball.md)
+  * [Bounce a Ball](gtk/brickout/bounce-a-ball.md)
+  * [Define Ball Struct](gtk/brickout/define-ball-struct.md)
 * [Invaders](gtk/invaders.md)
 * [Astroids](gtk/astroids.md)

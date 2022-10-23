@@ -1,16 +1,15 @@
 ---
 description: >-
-  View Source on Github:
   https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/01_Open_a_Window
 ---
 
 # Open a Window
 
-
+<figure><img src="../../.gitbook/assets/bricks_001.png" alt=""><figcaption><p>A window with GTK GL Area</p></figcaption></figure>
 
 First we make a quick 'Hello, World!' program. To make sure our environment is set up and working.
 
-```c: main.c
+```c
 #include <gtk/gtk.h>
 
 int main(int argc, char *argv[]) {

@@ -10,7 +10,7 @@ description: >-
 
 First we make a quick 'Hello, World!' program. To make sure our environment is set up and working.
 
-```c
+```c: main.c
 #include <gtk/gtk.h>
 
 int main(int argc, char *argv[]) {

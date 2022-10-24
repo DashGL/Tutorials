@@ -8,7 +8,7 @@ description: >-
 
 This tutorial covers how to make a Brickout Clone using the GTK+ library for a window context. OpenGL for rendering, and DashGL to manage matrix manipulation. We'll start off with something very simple, a very primitive clone of Brickout that doesn't use any sprites. We'll learn how to declare vertices and uniforms to draw basic objects on the screen and declare keydown callbacks to move entities on the screen
 
-<figure><img src="../../.gitbook/assets/bricks_017.png" alt=""><figcaption><p>Preview of completed tutorial with GTK, C and OpenGL</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/bricks_017 (1).png" alt=""><figcaption><p>Preview of completed tutorial with GTK, C and OpenGL</p></figcaption></figure>
 
 This tutorial was adapted from [Bill Mill's Canvas Tutorial](https://billmill.org/static/canvastutorial/), where he uses a basic Brickout clone to demonstrate the capabilities of the HTML5 canvas element. One of the first tutorials I was able to get working when starting off as a coder. The same concepts and style has been translated into OpenGL with GTK.
 
